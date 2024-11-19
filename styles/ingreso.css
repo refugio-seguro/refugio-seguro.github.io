@@ -1,0 +1,109 @@
+.barra-titulo {
+    background: var(--cuarto-color);
+    color: var(--tercer-color);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    box-shadow: var(--sombra);
+    padding: 10px 0px;
+}
+
+.menu-opciones {
+    background: var(--cuarto-color);
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: var(--sombra);
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+.menu-opciones > button {
+    color: var(--tercer-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-size: 22px;
+    background: transparent;
+}
+
+.ingreso-pagina {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.datos_orientador {
+    background: var(--tercer-color);
+    box-shadow: var(--sombra);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0px;
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: var(--sombra);
+}
+
+.camara_selecionador {
+    box-shadow: var(--sombra);
+    border-radius: 10px;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 4px solid var(--segundo-color);
+    outline: none;
+    width: 100%;
+}
+
+.boton-funcion {
+    margin: 10px 0px;
+    padding: 10px 10px;
+    box-shadow: var(--sombra);
+    border: 2px solid var(--segundo-color);
+    background: var(--segundo-color);
+    color: var(--tercer-color);
+    border-radius: 20px;
+    transition: 0.5s all ease-in-out;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.boton-funcion:hover {
+    border: 2px solid var(--cuarto-color);
+    background: var(--cuarto-color);
+    outline: none;
+}
+
+.boton-icono {
+    background: var(--segundo-color);
+    width: 60px;
+    height: 60px;
+    box-shadow: var(--sombra);
+    border-radius: 50%;
+    color: var(--tercer-color);
+    position: absolute;
+    right: 20px;
+    bottom: 80px;
+    font-size: 22px;
+}
+
+.modal-boton-confirmacion {
+    background-color: #38b000 !important;
+    color: white;
+}
+
+.modal-boton-cancelacion {
+    background-color: #611232 !important;
+    color: white;
+}
+
+.escaner {
+    margin: 10px 0px;
+    width: 100%;
+    height: 350px;
+}

@@ -1,0 +1,23 @@
+:root {
+    --primer-color:#f5f5f4;
+    --segundo-color:#a16acd;
+    --tercer-color:#fff;
+    --cuarto-color: #61338d;
+    --sombra: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Para evitar el scroll */
+}
