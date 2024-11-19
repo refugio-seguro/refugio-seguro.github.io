@@ -1,14 +1,14 @@
 function sesionSistema() {
     return {
-        orientador_usuario: "",
-        orientador_contrasena: "",
+        mujer_usuario: "",
+        mujer_contrasena: "",
 
         iniciarGestor:function() {
-            this.validarOrientador()
+            this.validarMujer()
         },
 
-        validarOrientador:function() {
-            const datosRecuperados = localStorage.getItem('orientador');
+        validarMujer:function() {
+            const datosRecuperados = localStorage.getItem('mujer');
     
             if (datosRecuperados) {
                 // Si existen datos en localStorage, redirigimos a ingreso.html
@@ -21,7 +21,7 @@ function sesionSistema() {
 
         validarAccesosSistema:function() {
             // Verificar si los campos están vacíos o nulos
-            if (!this.orientador_usuario || !this.orientador_contrasena) {
+            if (!this.mujer_usuario || !this.mujer_contrasena) {
                 Swal.fire({
                     position: "top-end",
                     icon: "error",
@@ -42,46 +42,30 @@ function sesionSistema() {
         },
 
         ingresarSistema:function() {
-            const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                orientador_usuario: this.orientador_usuario,
-                orientador_contrasena: this.orientador_contrasena
-            })
-            };
+            if (this.mujer_usuario == "Mujer1" && this.mujer_contrasena == "Mujer100") {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Inicio Exitoso",
+                    showConfirmButton: false,
+                    timer: 20000
+                });
 
-            fetch(`https://api.sisedugob.com/inciar-sesion-orientador`, options)
-            .then(response => { return response.json(); }) // Convertir la respuesta a JSON
-            .then(data => {
-                if (data.error) {
-                    Swal.fire({
-                        position: "top-end",
-                        icon: "error",
-                        title: data.error,
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                } else if (data.exito) {
-                    Swal.fire({
-                        position: "top-end",
-                        icon: "success",
-                        title: "Inicio Exitoso",
-                        showConfirmButton: false,
-                        timer: 20000
-                    });
-
-                    setTimeout(() => {
-                        this.guardarDatosOrientador(data.datos)
-                    }, 2500);
-                }
-            })
-            .catch(error => { console.error('Error:', error); });
+                setTimeout(() => {
+                    this.guardarDatosMujer(this.mujer_usuario)
+                }, 2500);
+            } else {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: data.error,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
         },
 
-        guardarDatosOrientador:function(datos) {
+        guardarDatosMujer:function(datos) {
             // Convierte el objeto de datos a un JSON string
             const datosString = JSON.stringify(datos);
 
