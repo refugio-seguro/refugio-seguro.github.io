@@ -26,12 +26,8 @@ function menuOpciones() {
         paginaIngreso:function() {
           window.location.href = 'ingreso.html';
         },
-
-        paginaSalida:function() {
-          window.location.href = 'salida.html';
-        },
-
-        paginaMensajes:function() {
+        
+        paginaAlertas:function() {
           window.location.href = 'mensajes.html';
         },
 

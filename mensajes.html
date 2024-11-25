@@ -24,35 +24,21 @@
 
 <div class="barra-titulo">
     <p>APP |</p>
-    <p>Mensajes de Alumnos</p>
+    <p>Seguridad para las mujeres</p>
 </div>
     
 <main class="ingreso-pagina" x-data="sesionSistema()" x-init="iniciarSistema()">
-    <div class="datos_orientador">
-        <p x-text="orientador_nombre"></p>
-        <p x-text="orientador_cargo"></p>
-    </div>
 
-    <select class="camara_selecionador" @change="seleccionarCamara($event)">
-        <option value="">Selecciona una cámara</option>
-        <template x-for="camara in camaras" :key="camara.id">
-            <option :value="camara.id" x-text="camara.label || 'Cámara' + camara.id"></option>
-        </template>
-    </select>
+    <button class="boton-funcion" @click="alertasEmergencia">Alerta de Emergencia</button>
+    <button class="boton-funcion"  @click="herramientasSeguridad" x-bind:disabled="!escaneando">Herramientas de Seguridad</button>
+    <button class="boton-funcion" @click="configuracion">Configuración</button>
 
-    <button class="boton-funcion" @click="iniciarEscaneo">Reiniciar Escaneo Cámara</button>
-    <button class="boton-funcion"  @click="detenerEscaneo" x-bind:disabled="!escaneando">Detener Escaneo Cámara</button>
-
-    <!-- Área donde se mostrará la cámara -->
-    <div class="escaner" id="qr-reader"></div>
-
-    <button class="boton-icono" @click="ingresoManualCurp"><i class="bi bi-journal-arrow-up"></i></button>
+    <button class="boton-icono" @click="ayuda"><i class="bi bi-journal-arrow-up"></i></button>
 </main>
 
 <div class="menu-opciones">
     <button @click="paginaIngreso">Ingreso <i class="bi bi-person-fill-add"></i></button>
-    <button @click="paginaSalida">Salida <i class="bi bi-person-fill-dash"></i></button>
-    <button @click="paginaMensajes">Mensajes <i class="bi bi-person-fill-exclamation"></i></button>
+    <button @click="paginaAlertas">Alertas <i class="bi bi-person-fill-exclamation"></i></button>
     <button @click="paginaCuenta">Cuenta <i class="bi bi-person-circle"></i></button>
 </div>
 

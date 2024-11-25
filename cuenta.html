@@ -24,22 +24,21 @@
 
 <div class="barra-titulo">
     <p>APP |</p>
-    <p>Cuenta Orientador</p>
+    <p>Seguridad para las mujeres</p>
 </div>
     
 <main class="ingreso-pagina" x-data="sesionSistema()">
     <div class="datos_orientador">
-        <p x-text="orientador_nombre"></p>
-        <p x-text="orientador_cargo"></p>
     </div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240385.39125630868!2d-99.15401734688473!3d19.711698627732623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ecdaed3eb785%3A0x4fa17bc53f2d4594!2zVGVjw6FtYWMsIE3DqXgu!5e0!3m2!1ses!2smx!4v1732570242949!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <button class="boton-funcion" @click="salirCuenta()">Salir de la Cuenta</button>
 </main>
 
 <div class="menu-opciones">
     <button @click="paginaIngreso">Ingreso <i class="bi bi-person-fill-add"></i></button>
-    <button @click="paginaSalida">Salida <i class="bi bi-person-fill-dash"></i></button>
-    <button @click="paginaMensajes">Mensajes <i class="bi bi-person-fill-exclamation"></i></button>
+    <button @click="paginaAlertas">Alertas <i class="bi bi-person-fill-exclamation"></i></button>
     <button @click="paginaCuenta">Cuenta <i class="bi bi-person-circle"></i></button>
 </div>
 
